@@ -36,3 +36,12 @@
     padding: 16px;
     border-radius: 9999px;
 }
+
+/* body */
+
+.bg-special {
+    background: #BAE8E8;
+}
+.h-75 {
+    height: 75vh;
+}
