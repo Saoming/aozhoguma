@@ -44,7 +44,7 @@
       <!-- order-first md:order-none -->
       <div class="col-span-2 h-screen md:overflow-auto">
         <div class="max-w-6xl mx-auto">
-          <Menu />
+          <HeaderFull />
           <Search />
           <CardSection />
           <BlogSection />

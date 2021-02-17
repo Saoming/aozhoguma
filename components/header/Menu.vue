@@ -78,19 +78,22 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+    data() {
     return {
       isActive: false,
     };
   },
-  watch: {
+    watch: {
     $route() {
       this.isActive = false;
     },
   },
-};
+
+})
 </script>
 
 <style>
