@@ -1,124 +1,119 @@
 <template>
-  <div id="app">
+  <div>
     <div class="grid grid-cols-1 md:grid-cols-3 w-full">
-      <!-- right section -->
-      <div
-        class="relative header bg-blue-100 h-auto md:h-screen flex flex-col pt-32 pb-24 md:py-0 px-8 md:px-12 justify-center text-white"
-        style="background-size: cover ;">
-        <div class="z-50">
-          <h1 class="font-bold text-3xl"> This is West Australia</h1>
-          <h3 class="text-2xl mb-4"> Your Adventure Awaits</h3>
-          <p>Sed placerat maecenas ipsum hendrerit adipiscing felis. Vitae ultrices orci sociis ultrices proin aliquam
-            libero lectus. Sem lacus pretium ut vestibulum tortor faucibus felis aliquet nam.</p>
-          <button
-            class="focus:ring-4 focus:outline-non mt-6 whitespace-nowrap inline-flex items-center justify-center px-3 md:px-5 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black bg-yellow-300 hover:bg-yellow-400">
-            More About Us </button>
+      <no-ssr>
+        <vue-tiny-slider v-bind="tinySliderOptions">
+          <div
+            class="relative header bg-blue-100 h-auto md:h-screen flex flex-col pt-32 pb-24 md:py-0 px-8 md:px-12 justify-center text-white">
+            <img src="https://picsum.photos/id/1002/800/900" alt="Placeholder"
+              class="top-0 left-0 absolute object-cover h-full w-full" />
+
+            <div class="relative max-w-md mx-auto md:h-screen flex flex-col justify-center z-50">
+              <h1 class="font-bold text-3xl">This is West Australia</h1>
+              <h2 class="text-2xl mb-4">Your Adventure Awaits</h2>
+              <p>
+                Sed placerat maecenas ipsum hendrerit adipiscing felis. Vitae
+                ultrices orci sociis ultrices proin aliquam libero lectus. Sem
+                lacus pretium ut vestibulum tortor faucibus felis aliquet nam.
+              </p>
+              <a href="#"
+                class="focus:ring-4 focus:outline-non mt-6 font-bold whitespace-nowrap inline-flex items-center justify-center px-3 md:px-5 py-2 border border-transparent rounded-md shadow-sm text-base text-black bg-yellow-300 hover:bg-yellow-400">Find
+                out more</a>
+            </div>
+          </div>
+
+          <div
+            class="relative header bg-blue-100 h-auto md:h-screen flex flex-col pt-32 pb-24 md:py-0 px-8 md:px-12 justify-center text-white">
+            <img src="https://picsum.photos/seed/picsum/800/900" alt="Placeholder"
+              class="top-0 left-0 absolute object-cover h-full w-full" />
+
+            <div class="relative max-w-md mx-auto md:h-screen flex flex-col justify-center z-50">
+              <h1 class="font-bold text-3xl">Another slider</h1>
+              <h2 class="text-2xl mb-4">Subtitlte here</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis libero corporis, laboriosam qui animi enim reiciendis
+                fuga natus placeat eveniet temporibus eligendi, ipsa,
+                praesentium nemo mollitia. Aliquid saepe cupiditate laudantium?
+              </p>
+            </div>
+          </div>
+        </vue-tiny-slider>
+      </no-ssr>
+
+      <!-- order-first md:order-none -->
+      <div class="col-span-2 h-screen md:overflow-auto">
+        <div class="max-w-6xl mx-auto">
+          <Menu />
+          <Search />
+          <CardSection />
+          <BlogSection />
         </div>
       </div>
-      <!-- left section -->
-
-      <section class="col-span-2 h-screen md:overflow-auto">
-        <div class="max-w-6xl mx-auto">
-          <HeaderHalf />
-          <Search />
-          <div class="px-4 md:px-8 py-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <h1 class="font-bold text-2xl">Discover</h1>
-                <p class="text-gray-400">Unique activities with local experts</p>
-              </div>
-              <div>
-                <button
-                  class="focus:ring-4 focus:outline-none inline-flex items-center justify-center p-2 border border-transparent rounded-full shadow-sm text-base font-medium text-black bg-yellow-300 hover:bg-yellow-400 mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel">
-                    <path d="M15 18l-6-6 6-6"></path>
-                  </svg>
-                </button>
-                <button
-                  class="focus:ring-4 focus:outline-none inline-flex items-center justify-center p-2 border border-transparent rounded-full shadow-sm text-base font-medium text-black bg-yellow-300 hover:bg-yellow-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel">
-                    <path d="M9 18l6-6-6-6"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div
-                class="grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="col-span-3 row-span-4 p-1 m-1"><a href="#"><img src="https://picsum.photos/640/400/?random"
-                      alt="Placeholder" class="rounded-lg object-cover h-48 w-full">
-                  </a>
-                </div>
-                <div class="col-span-3 row-span-1">
-                  <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg"><a href="#" class="no-underline hover:underline text-black">
-                        Title
-                      </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">9 min ago</p>
-                  </header>
-                </div>
-              </div>
-              <div
-                class="grid grid-cols-3 grid-rows-7 grid-flow-row ove+
-                8 rflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="col-span-3 row-span-4 p-1 m-1"><a href="#"><img src="https://picsum.photos/640/400/?random"
-                      alt="Placeholder" class="rounded-lg object-cover h-48 w-full"></a></div>
-                <div class="col-span-3 row-span-1">
-                  <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg"><a href="#" class="no-underline hover:underline text-black">
-                        Title
-                      </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">9 min ago</p>
-                  </header>
-                </div>
-              </div>
-              <div
-                class="grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                <div class="col-span-3 row-span-4 p-1 m-1"><a href="#"><img src="https://picsum.photos/640/400/?random"
-                      alt="Placeholder" class="rounded-lg object-cover h-48 w-full"></a></div>
-                <div class="col-span-3 row-span-1">
-                  <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg"><a href="#" class="no-underline hover:underline text-black">
-                        Title
-                      </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">9 min ago</p>
-                  </header>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Blog -->
-          <div class="my-6 px-4 md:px-8 py-4" data-v-7778ca56="">
-            <div class="flex items-center justify-between">
-              <div>
-                <h1 class="font-bold text-2xl">Blog</h1>
-                <p class="text-gray-400">Our Experts' recommended reads</p>
-              </div>
-            </div>
-            <div class="mt-6">
-              <div class="bg-blue-100 p-6 rounded-lg overflow-hidden">
-                <div class="flex flex-col md:flex-row items-center justify-between px-0 md:px-8">
-                  <div class="text-lg font-semibold mb-12 md:mb-0">
-                    <p>Wondering what to do with your stacks (and stacks) of books? Take a look at our top
-                      ideas for travel libraries.</p>
-                    <a href="#"
-                      class="focus:ring-4 focus:outline-non mt-6 whitespace-nowrap inline-flex items-center justify-center px-3 md:px-5 py-2 border border-transparent rounded-md shadow-sm text-base text-white font-medium bg-gray-600 hover:bg-gray-800">Find
-                      out more</a>
-                  </div>
-                  <div class="-mb-12 -mr-6">
-                    <img src="http://www.staging.wp.local/australia-guy/wp-content/uploads/2021/02/img.svg" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    head() {
+      return {
+        link: [{
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css",
+        }, ],
+        bodyAttrs: {
+          class: "home",
+        },
+      };
+    },
+    data() {
+      return {
+        tinySliderOptions: {
+          mouseDrag: true,
+          loop: true,
+          items: 1,
+          swipeAngle: 45,
+          controlsText: [
+            '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel" data-v-1c6aabbe=""><path d="M15 18l-6-6 6-6" data-v-1c6aabbe=""></path></svg>',
+            '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel" data-v-1c6aabbe=""><path d="M9 18l6-6-6-6" data-v-1c6aabbe=""></path></svg>',
+          ],
+        },
+      };
+    },
+  };
+</script>
+
+
+<style>
+  .header:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+  }
+
+  .tns-outer {
+    position: relative;
+  }
+
+  .tns-controls {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    @apply absolute md:right-0 md:bottom-0 w-full hidden md:flex items-center justify-end mt-10 md:mt-0 py-0 md:py-8 px-0 md:px-12;
+  }
+
+  .tns-controls>button {
+    @apply focus:ring-4 focus:outline-none inline-flex items-center justify-center p-2 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-gray-800 hover:bg-gray-800 ml-6;
+  }
+
+  .tns-nav {
+    display: none;
+  }
+</style>
