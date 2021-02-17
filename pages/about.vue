@@ -2,16 +2,14 @@
   <div>
     <HeaderFull />
     <HeroSection>
-      <div class="flex flex-col md:flex-row justify-between">
-        <div class="flex-grow md:w-3/5 md:p-8 max-w-2xl leading-7">
-          <h1 class="font-extrabold text-3xl mb-2">About us</h1>
-          <p>
-            <strong>
-              Aozhoguma is a travel blog based in Australia, focused on brands,
-              products, campaigns and interactive experiences.</strong
-            >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </p>
+      <div class="flex flex-col md:flex-row">
+        <div class="flex-grow md:p-8 max-w-2xl leading-7">
+          <h1 class="text-6xl font-bold mb-12">About us</h1>
+          <div class="md:w-9/12"> 
+            <p class="text-2xl mb-12">
+              Aozhoguma is a travel blog based in Australia, focused on brands, products, campaigns and interactive experiences. 
+            </p>
+          </div>
           <svg
             class="mt-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +25,8 @@
             <path d="M12 5v13M5 12l7 7 7-7" />
           </svg>
         </div>
-        <div class="md:w-2/5 md:mt-0 mt-6 h-auto">
-          <img src="http://www.staging.wp.local/australia-guy/wp-content/uploads/2021/02/about.svg" alt="" />
+        <div class="md:mt-0 mt-6 h-auto">
+          <img src="http://www.staging.wp.local/australia-guy/wp-content/uploads/2021/02/about.svg" alt="" class="w-full" />
         </div>
       </div>
     </HeroSection>
@@ -80,3 +78,13 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+const About = Vue.extend({
+  name: "About",
+})
+
+export default About;
+</script>

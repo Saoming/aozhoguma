@@ -54,10 +54,13 @@
   </div>
 </template>
 
-<script>
-  export default {
-    head() {
-      return {
+<script lang="ts">
+import Vue from 'vue'
+
+const Index = Vue.extend({
+  name: "Index",
+  head() {
+    return {
         link: [{
           rel: "stylesheet",
           href: "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css",
@@ -65,10 +68,10 @@
         bodyAttrs: {
           class: "home",
         },
-      };
-    },
-    data() {
-      return {
+    };
+  },
+  data(){
+    return {
         tinySliderOptions: {
           mouseDrag: true,
           loop: true,
@@ -79,9 +82,11 @@
             '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel" data-v-1c6aabbe=""><path d="M9 18l6-6-6-6" data-v-1c6aabbe=""></path></svg>',
           ],
         },
-      };
-    },
-  };
+    };
+  }
+});
+
+export default Index;
 </script>
 
 

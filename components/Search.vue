@@ -2,7 +2,7 @@
     <form id="searchform" method="get">
         <div class="relative -mt-12 mb-6 md:mb-0 md:mt-0 px-4 md:px-8 py-4 z-50">
             <div
-                class="bg-white flex items-center pl-6 pr-2 focus:ring-2 block w-full sm:text-sm border border-gray-300 rounded-full">
+                class="bg-white flex items-center pl-6 pr-2 focus:ring-2 w-full sm:text-sm border border-gray-300 rounded-full">
                 <input placeholder="Where are you going?" class="flex-grow py-4 focus:outline-none"
                     value="">
                 <button type="submit"
