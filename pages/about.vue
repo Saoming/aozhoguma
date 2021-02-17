@@ -81,8 +81,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+const paramid = '5';
 
 const About = Vue.extend({
+    async asyncData({ $axios }) {
+    const api = `http://www.staging.wp.local/australia-guy/wp-json/acf/v3/pages/${paramid}`
+    const data = await $axios.$get(api).then( ( response )  => {
+      console.log(response);
+      return response;
+    }).catch(( error ) => {
+      console.error(error);
+    })
+    return { data };
+  },
   name: "About",
 })
 

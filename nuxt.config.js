@@ -1,5 +1,9 @@
 export default {
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/axios'],
+  axios: {
+    // extra config e.g
+ },
   plugins: [
     { src: '~/plugins/composition-api'},
     { src: '~/plugins/vue-tiny-slider.js', mode: 'client' } // client side

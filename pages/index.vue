@@ -56,8 +56,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
+const paramid = '5';
 
 const Index = Vue.extend({
+  // async asyncData({ $axios }) {
+  //   const api = `http://www.staging.wp.local/australia-guy/wp-json/acf/v3/pages/${paramid}`
+  //   const data = await $axios.get(api).then( ( response )  => {
+  //     return response
+  //   }).catch(( error ) => {
+  //     console.error(error);
+  //   })
+  //   return { data };
+  // },
   name: "Index",
   head() {
     return {
@@ -72,6 +82,10 @@ const Index = Vue.extend({
   },
   data(){
     return {
+        wordpress: {
+          data: {},
+          error: {},
+        },
         tinySliderOptions: {
           mouseDrag: true,
           loop: true,
@@ -82,11 +96,12 @@ const Index = Vue.extend({
             '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="bevel" data-v-1c6aabbe=""><path d="M9 18l6-6-6-6" data-v-1c6aabbe=""></path></svg>',
           ],
         },
+        
     };
   }
 });
 
-export default Index;
+export default Index
 </script>
 
 
