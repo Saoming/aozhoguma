@@ -15,9 +15,11 @@
   </div>
 </template>
 
-<script>
-export default {
-computed: {
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  computed: {
   posts() {
     return this.$store.state.posts;
   },
@@ -25,5 +27,5 @@ computed: {
 created() {
   this.$store.dispatch("getPosts");
 },
-};
+})
 </script>
