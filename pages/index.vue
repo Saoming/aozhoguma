@@ -45,7 +45,7 @@
       <div class="col-span-2 h-screen md:overflow-auto">
         <div class="max-w-6xl mx-auto">
           <HeaderFull />
-          <Search />
+          <Search v-bind:placeholderText="placeholder" />
           <CardSection />
           <BlogSection />
         </div>
@@ -56,18 +56,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-const paramid = '5';
 
 const Index = Vue.extend({
-  // async asyncData({ $axios }) {
-  //   const api = `http://www.staging.wp.local/australia-guy/wp-json/acf/v3/pages/${paramid}`
-  //   const data = await $axios.get(api).then( ( response )  => {
-  //     return response
-  //   }).catch(( error ) => {
-  //     console.error(error);
-  //   })
-  //   return { data };
-  // },
   name: "Index",
   head() {
     return {
@@ -82,6 +72,7 @@ const Index = Vue.extend({
   },
   data(){
     return {
+        placeholder: "Where are you going?",
         wordpress: {
           data: {},
           error: {},

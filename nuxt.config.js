@@ -6,7 +6,8 @@ export default {
  },
   plugins: [
     { src: '~/plugins/composition-api'},
-    { src: '~/plugins/vue-tiny-slider.js', mode: 'client' } // client side
+    { src: '~/plugins/vue-tiny-slider.js', mode: 'client' }, // client side
+    
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
