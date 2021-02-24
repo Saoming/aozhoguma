@@ -42,6 +42,15 @@
                         <li class="text-2xl mb-3">
                             <NuxtLink to="/blog">Blog</NuxtLink>
                         </li>
+                          <li class="text-2xl mb-3">
+                            <NuxtLink to="/faq">Faq</NuxtLink>
+                        </li>
+                          <li class="text-2xl mb-3">
+                            <NuxtLink to="/gallery">Gallery</NuxtLink>
+                        </li>
+                        <li class="text-2xl mb-3">
+                            <NuxtLink to="/contact-us">Contact Us</NuxtLink>
+                        </li>
                         <li class="text-2xl mb-3">
                             <NuxtLink to="/login">Login</NuxtLink>
                         </li>

@@ -104,15 +104,19 @@ export default Vue.extend({
   transition: 0.5s;
   z-index: 999;
 }
+
 .slide-nav.active {
   right: 0;
 }
+
 .slide-nav__link li a {
   font-family: "Josefin Sans", sans-serif;
 }
+
 .slide-nav__link li a.nuxt-link-exact-active {
   font-weight: bold;
 }
+
 .overlay {
   position: fixed;
   left: 0;
@@ -125,6 +129,7 @@ export default Vue.extend({
   opacity: 0;
   transition: 0.5s;
 }
+
 .overlay.active {
   visibility: visible;
   opacity: 1;
