@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderUser />
+        <HeaderFull :headerClass="HeaderClass" :headerWrapperClass="HeaderWrapperClass" :logoClass="LogoClass" />
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
             <!-- Left -->
             <div class="relative header bg-blue-100 h-auto md:h-screen flex flex-col pt-32 pb-24 md:py-0 px-8 md:px-12 justify-center text-white">
@@ -20,3 +20,16 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+    data(){
+        return {
+            HeaderClass: "absolute left-0 top-0 w-full mx-auto bg-white md:bg-transparent",
+            HeaderWrapperClass: "md:relative w-full flex items-center justify-between px-4 md:px-8 py-8 z-50",
+            LogoClass: "text-4xl font-bold text-black md:text-white"
+        }
+    }
+})
+</script>

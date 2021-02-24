@@ -30,6 +30,7 @@
     "@vue/composition-api": "^1.0.0-rc.1",
     "nuxt": "^2.15.0",
     "nuxt-property-decorator": "^2.9.1",
+    "vue-plyr": "^7.0.0",
     "vue-tiny-slider": "^0.1.39"
   },
   "lint": "eslint --ext .ts,.js,.vue ."

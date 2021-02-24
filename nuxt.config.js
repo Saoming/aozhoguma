@@ -7,7 +7,7 @@ export default {
   plugins: [
     { src: '~/plugins/composition-api'},
     { src: '~/plugins/vue-tiny-slider.js', mode: 'client' }, // client side
-    
+    { src: '~/plugins/video-plyr', mode: 'client' },
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
@@ -16,5 +16,8 @@ export default {
     config: {}
   },
   css: ['@/assets/css/global.css'],
-  components: true
+  components: true,
+  build: {
+    analyze: true,
+  }
 }

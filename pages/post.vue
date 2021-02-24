@@ -1,5 +1,6 @@
 <template>
 <div class="posts">
+  <HeaderFull />
   <main>
     <h2>Posts</h2>
   <!-- here we loop through the posts -->

@@ -38,7 +38,7 @@ h6 {
 
 .hamburger-menu span {
     text-align: center;
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
     background: #000;
     height: 3px;
     width: 100%;
@@ -65,7 +65,7 @@ h6 {
 .hamburger-menu-bg {
     width: 55px;
     height: 55px;
-    background: #BAE8E8;
+    background: #bae8e8;
     padding: 16px;
     border-radius: 9999px;
 }
@@ -73,15 +73,21 @@ h6 {
 /* body */
 
 .bg-special {
-    background: #BAE8E8;
+    background: #bae8e8;
 }
+
 .bg-color-gray {
-    background: #EEEEEE;
+    background: #eee;
 }
 
 .bg-special-2 {
-    background: #F5F4FF;
+    background: #f5f4ff;
 }
+
 .bg-special-3 {
-    background: #B5A87D;
+    background: #b5a87d;
+}
+.vertical-post-img {
+    width: 336px;
+    height: auto;
 }

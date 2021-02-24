@@ -30,16 +30,27 @@
                     <!--  Tabs -->
                     <div class="flex">
                         <div class="px-12 py-4 rounded-t-xl bg-black border-t text-white cursor-pointer">POPULAR</div>
-                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> TRAVEL</div>
-                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> CULTURE </div>
-                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> NATURE </div>
+                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> TRAVEL
+                        </div>
+                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> CULTURE
+                        </div>
+                        <div class="px-12 py-4 rounded-t-xl bg-special-2 border border-gray-200 cursor-pointer"> NATURE
+                        </div>
                     </div>
                     <!-- Content -->
                     <div class="rounded bg-special-2 w-full py-14">
                         <div class="px-8">
 
                             <!-- Content for Main Hero Post -->
-                            <div>
+                            <div class="flex flex-col md:flex-row">
+                               <MainPostTabSection />
+                                <div class="px-6">
+                                    <!-- Post vertical -->
+                                    <VerticalPostSection />
+                                    <VerticalPostSection />
+                                    <VerticalPostSection />
+
+                                </div>
                             </div>
                             <!--  -->
                         </div>
@@ -48,24 +59,13 @@
                 <!-- See More Post  -->
                 <h2 class="text-4xl font-bold mb-8"> See other articles </h2>
                 <div class="grid grid-cols-2 gap-8">
-                    <!-- Post -->
-                    <div class="flex flex-col">
-                        <div class="w-full">
-                            <img src="https://picsum.photos/700/400" alt="" class="object-cover rounded-t-lg">
-                        </div>
-                        <div class="bg-special-3 p-4">
-                            <!-- time -->
-                            <div> Posted 35 seconds ago </div>
-                            <h3> Featured </h3>
-                            <div>
-                                A purus mattis dolor purus turpis scelerisque massa suspendisse vel. Massa est leo
-                                facilisi egestas cursus. Risus molestie commodo venenatis, sed vitae pellentesque urna.
-                                Proin maecenas imperdiet amet, tortor.
-                            </div>
-                        </div>
-                    </div>
+                    <OtherPostSection />
+                    <OtherPostSection />
+                    <OtherPostSection />
+                    <OtherPostSection />
 
                 </div>
+
             </div>
         </div>
 

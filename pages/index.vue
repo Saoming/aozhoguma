@@ -97,7 +97,7 @@ export default Index
 
 
 <style>
-  .header:before {
+  .header::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -120,7 +120,7 @@ export default Index
     @apply absolute md:right-0 md:bottom-0 w-full hidden md:flex items-center justify-end mt-10 md:mt-0 py-0 md:py-8 px-0 md:px-12;
   }
 
-  .tns-controls>button {
+  .tns-controls > button {
     @apply focus:ring-4 focus:outline-none inline-flex items-center justify-center p-2 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-gray-800 hover:bg-gray-800 ml-6;
   }
 
